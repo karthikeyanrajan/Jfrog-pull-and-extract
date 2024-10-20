@@ -1,5 +1,6 @@
 name: "Download and Extract Artifact"
-on: push
+on:
+  workflow_dispatch:
 
 env:
   ARTIFACT_URL: "https://knra.jfrog.io/artifactory/knrepo-local/gha-artifacts/"
