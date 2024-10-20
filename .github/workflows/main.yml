@@ -9,7 +9,7 @@ env:
   DESTINATION_FOLDER: "/var/www/html"
 
 jobs:
-  download:
+  download-extract:
     runs-on: ubuntu-latest
     
     steps:
