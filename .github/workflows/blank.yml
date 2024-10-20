@@ -1,0 +1,21 @@
+name: "Download and Extract Artifact"
+on: push
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout the repository (if needed)
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      # Download the .tgz file from JFrog Artifactory
+      - name: Download Artifact from JFrog
+        run: |
+          wget --user=${{ secrets.JF_USER }} --password=${{ secrets.JF_PASSWORD }} https://knra.jfrog.io/artifactory/knnpm-npm-local/path/to/artifacts/build_20241015111239.tgz
+        
+      # Extract the downloaded .tgz file
+      - name: Extract Artifact
+        run: |
+          tar -xvzf build_20241015111239.tgz
