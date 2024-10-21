@@ -6,7 +6,7 @@ env:
   ARTIFACT_URL: "https://knra.jfrog.io/artifactory/knrepo-local/gha-artifacts/"
   BUILD_NAME: "build_20241020143306.tgz"
   MACHINE_NAME: "ubuntu"
-  MACHINE_IP: "18.206.220.69"
+  MACHINE_IP: "54.209.53.21"
   DESTINATION_FOLDER: "/var/www/html"
 
 jobs:
